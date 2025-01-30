@@ -25,7 +25,7 @@ int main() {
     // Teste do ServicoConta
     ServicoConta servicoConta(db);
     CODIGO codigoConta("ABC123");
-    SENHA senhaConta(12345);
+    SENHA senhaConta(58396);
 
     if (servicoConta.criarConta(codigoConta, senhaConta)) {
         std::cout << "Conta criada com sucesso!" << std::endl;
@@ -41,7 +41,7 @@ int main() {
 
     // Teste do ServicoViagem
     ServicoViagem servicoViagem(db);
-    CODIGO codigoViagem("VIAG01");
+    CODIGO codigoViagem(codigoConta.GetCodigo());
     NOME nomeViagem("Viagem para o Nordeste");
     AVALIACAO avaliacaoViagem(5);
 

@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS Conta (
     codigo TEXT PRIMARY KEY,
-    senha TEXT NOT NULL
+    senha INTEGER NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Viagem (

@@ -20,6 +20,11 @@ bool ServicoConta::autenticarConta(const CODIGO& codigo, const SENHA& senha) {
     return false;
 }
 
+bool ServicoConta::deletarConta(const CODIGO& codigo) {
+    std::string query = "DELETE FROM Conta WHERE codigo = '" + codigo.GetCodigo() + "';";
+    return db.execute(query);
+}
+
 // Implementação do ServicoViagem
 ServicoViagem::ServicoViagem(Database& database) : db(database) {}
 
@@ -39,6 +44,11 @@ bool ServicoViagem::listarViagens(const CODIGO& codigoConta) {
         return true;
     }
     return false;
+}
+
+bool ServicoViagem::deletarViagem(const CODIGO& codigo) {
+    std::string query = "DELETE FROM Viagem WHERE codigo = '" + codigo.GetCodigo() + "';";
+    return db.execute(query);
 }
 
 // Implementação do ServicoDestino
@@ -62,6 +72,11 @@ bool ServicoDestino::listarDestinos(const CODIGO& codigoViagem) {
     return false;
 }
 
+bool ServicoDestino::deletarDestino(const CODIGO& codigo) {
+    std::string query = "DELETE FROM Destino WHERE codigo = '" + codigo.GetCodigo() + "';";
+    return db.execute(query);
+}
+
 // Implementação do ServicoAtividade
 ServicoAtividade::ServicoAtividade(Database& database) : db(database) {}
 
@@ -83,6 +98,11 @@ bool ServicoAtividade::listarAtividades(const CODIGO& codigoDestino) {
     return false;
 }
 
+bool ServicoAtividade::deletarAtividade(const CODIGO& codigo) {
+    std::string query = "DELETE FROM Atividade WHERE codigo = '" + codigo.GetCodigo() + "';";
+    return db.execute(query);
+}
+
 // Implementação do ServicoHospedagem
 ServicoHospedagem::ServicoHospedagem(Database& database) : db(database) {}
 
@@ -102,4 +122,9 @@ bool ServicoHospedagem::listarHospedagens(const CODIGO& codigoDestino) {
         return true;
     }
     return false;
+}
+
+bool ServicoHospedagem::deletarHospedagem(const CODIGO& codigo) {
+    std::string query = "DELETE FROM Hospedagem WHERE codigo = '" + codigo.GetCodigo() + "';";
+    return db.execute(query);
 }

@@ -7,10 +7,26 @@ Database::~Database() {
 }
 
 bool Database::open() {
-    if (sqlite3_open(dbPath.c_str(), &db) != SQLITE_OK) {
-        std::cerr << "Erro ao abrir o banco de dados: " << sqlite3_errmsg(db) << std::endl;
+    close(); // Fecha a conexão antes de abrir uma nova
+    
+    std::cout << "Tentando abrir banco de dados em: " << dbPath << std::endl;
+    int flags = SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE | SQLITE_OPEN_FULLMUTEX;
+    int rc = sqlite3_open_v2(dbPath.c_str(), &db, flags, nullptr);
+    
+    if (rc != SQLITE_OK) {
+        std::cerr << "Erro ao abrir o banco de dados: " << sqlite3_errmsg(db) << " (Código: " << rc << ")" << std::endl;
         return false;
     }
+    std::cout << "Banco de dados aberto com sucesso." << std::endl;
+    
+    // Ativar suporte a chaves estrangeiras (foreign keys)
+    std::cout << "Ativando suporte a chaves estrangeiras..." << std::endl;
+    if (!execute("PRAGMA foreign_keys = ON;")) {
+        std::cerr << "Erro: Não foi possível ativar PRAGMA foreign_keys." << std::endl;
+        return false;
+    }
+    
+    std::cout << "Chaves estrangeiras ativadas com sucesso." << std::endl;
     return true;
 }
 

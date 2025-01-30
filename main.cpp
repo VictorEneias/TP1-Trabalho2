@@ -41,7 +41,7 @@ int main() {
 
     // Teste do ServicoViagem
     ServicoViagem servicoViagem(db);
-    CODIGO codigoViagem(codigoConta.GetCodigo());
+    CODIGO codigoViagem("VIAG01");
     NOME nomeViagem("Viagem para o Nordeste");
     AVALIACAO avaliacaoViagem(5);
 
@@ -55,6 +55,12 @@ int main() {
         std::cout << "Listagem de viagens concluída." << std::endl;
     } else {
         std::cout << "Erro ao listar viagens." << std::endl;
+    }
+
+    if (servicoConta.deletarConta(codigoConta)) {
+        std::cout << "Conta deletada com sucesso!" << std::endl;
+    } else {
+        std::cout << "Erro ao deletar conta." << std::endl;
     }
 
     return 0;

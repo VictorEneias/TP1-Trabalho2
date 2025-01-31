@@ -128,3 +128,27 @@ bool ServicoHospedagem::deletarHospedagem(const CODIGO& codigo) {
     std::string query = "DELETE FROM Hospedagem WHERE codigo = '" + codigo.GetCodigo() + "';";
     return db.execute(query);
 }
+
+// Implementação do ServicoViagem
+bool ServicoViagem::atualizarViagem(const CODIGO& codigo, const NOME& novoNome, const AVALIACAO& novaAvaliacao) {
+    std::string query = "UPDATE Viagem SET nome = '" + novoNome.GetNome() + "', avaliacao = " + std::to_string(novaAvaliacao.GetAvaliacao()) + " WHERE codigo = '" + codigo.GetCodigo() + "';";
+    return db.execute(query);
+}
+
+// Implementação do ServicoDestino
+bool ServicoDestino::atualizarDestino(const CODIGO& codigo, const NOME& novoNome, const DATA& novaDataInicio, const DATA& novaDataFim, const AVALIACAO& novaAvaliacao) {
+    std::string query = "UPDATE Destino SET nome = '" + novoNome.GetNome() + "', data_inicio = '" + novaDataInicio.GetData() + "', data_fim = '" + novaDataFim.GetData() + "', avaliacao = " + std::to_string(novaAvaliacao.GetAvaliacao()) + " WHERE codigo = '" + codigo.GetCodigo() + "';";
+    return db.execute(query);
+}
+
+// Implementação do ServicoAtividade
+bool ServicoAtividade::atualizarAtividade(const CODIGO& codigo, const NOME& novoNome, const DATA& novaData, const HORARIO& novoHorario, const DURACAO& novaDuracao, const DINHEIRO& novoPreco, const AVALIACAO& novaAvaliacao) {
+    std::string query = "UPDATE Atividade SET nome = '" + novoNome.GetNome() + "', data = '" + novaData.GetData() + "', horario = '" + novoHorario.GetHorario() + "', duracao = " + std::to_string(novaDuracao.GetDuracao()) + ", preco = " + std::to_string(novoPreco.GetDinheiro()) + ", avaliacao = " + std::to_string(novaAvaliacao.GetAvaliacao()) + " WHERE codigo = '" + codigo.GetCodigo() + "';";
+    return db.execute(query);
+}
+
+// Implementação do ServicoHospedagem
+bool ServicoHospedagem::atualizarHospedagem(const CODIGO& codigo, const NOME& novoNome, const AVALIACAO& novaAvaliacao, const DINHEIRO& novaDiaria) {
+    std::string query = "UPDATE Hospedagem SET nome = '" + novoNome.GetNome() + "', avaliacao = " + std::to_string(novaAvaliacao.GetAvaliacao()) + ", diaria = " + std::to_string(novaDiaria.GetDinheiro()) + " WHERE codigo = '" + codigo.GetCodigo() + "';";
+    return db.execute(query);
+}

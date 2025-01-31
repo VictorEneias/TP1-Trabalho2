@@ -25,7 +25,7 @@ int main() {
     // Teste do ServicoConta
     ServicoConta servicoConta(db);
     CODIGO codigoConta("ABC123");
-    SENHA senhaConta(12345);
+    SENHA senhaConta(179253);
 
     if (servicoConta.criarConta(codigoConta, senhaConta)) {
         std::cout << "Conta criada com sucesso!" << std::endl;

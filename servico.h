@@ -3,16 +3,19 @@
 
 #include "database.h"
 #include "dominio.h"
+#include "entidade.h"
 
 class ServicoConta {
 private:
     Database& db;
 
 public:
+    ServicoConta();
     ServicoConta(Database& database);
     bool criarConta(const CODIGO& codigo, const SENHA& senha);
     bool autenticarConta(const CODIGO& codigo, const SENHA& senha);
     bool deletarConta(const CODIGO& codigo);
+    CONTA getConta(const CODIGO& nome);
 };
 
 class ServicoViagem {

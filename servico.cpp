@@ -19,6 +19,32 @@ bool ServicoConta::autenticarConta(const CODIGO& codigo, const SENHA& senha) {
     }
     return false;
 }
+CONTA ServicoConta::getConta(const CODIGO& codigo) {
+    std::string query = "SELECT codigo, senha FROM Conta WHERE codigo = '" + codigo.GetCodigo() + "';";
+    sqlite3_stmt* stmt = db.prepare(query);
+
+    if (stmt && sqlite3_step(stmt) == SQLITE_ROW) {
+        // Retrieve the codigo and senha from the database
+        std::string codigoDB = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0));
+        int senhaDB = sqlite3_column_int(stmt, 1);
+
+        // Create a CONTA object
+        CONTA conta;
+        conta.SetCodigo(CODIGO(codigoDB));
+        conta.SetSenha(SENHA(senhaDB));
+
+        // Clean up the statement
+        sqlite3_finalize(stmt);
+
+        // Return the CONTA object
+        return conta;
+    }
+
+    // If no rows are returned, clean up and throw an exception
+    sqlite3_finalize(stmt);
+    throw std::runtime_error("Conta não encontrada para o código fornecido.");
+}
+
 
 bool ServicoConta::deletarConta(const CODIGO& codigo) {
     std::string query = "DELETE FROM Conta WHERE codigo = '" + codigo.GetCodigo() + "';";

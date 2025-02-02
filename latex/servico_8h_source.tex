@@ -1,0 +1,74 @@
+\doxysection{servico.\+h}
+\hypertarget{servico_8h_source}{}\label{servico_8h_source}\mbox{\hyperlink{servico_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ SERVICO\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ SERVICO\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}database.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}dominio.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}entidade.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classServicoConta}{ServicoConta}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classDatabase}{Database}}\&\ db;\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classServicoConta_a34ee07b9da21ee0497bae36e62d7ff20}{ServicoConta}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classServicoConta_a34ee07b9da21ee0497bae36e62d7ff20}{ServicoConta}}(\mbox{\hyperlink{classDatabase}{Database}}\&\ database);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoConta_ac49efee149102e8931dec15566e6eb52}{criarConta}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classSENHA}{SENHA}}\&\ senha);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoConta_a88fa5302ccdbf77e0b4b864015acca8f}{autenticarConta}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classSENHA}{SENHA}}\&\ senha);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoConta_a9bb8cc96479fd2071da40fe3c5c4538e}{deletarConta}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo);}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classCONTA}{CONTA}}\ \mbox{\hyperlink{classServicoConta_ac6c8c3e8599684b53cf3bb33061d4dcd}{getConta}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ nome);}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classServicoViagem}{ServicoViagem}}\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{classDatabase}{Database}}\&\ db;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classServicoViagem}{ServicoViagem}}(\mbox{\hyperlink{classDatabase}{Database}}\&\ database);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoViagem_a85c24daf43dbe96b96f5dd615486746c}{criarViagem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classNOME}{NOME}}\&\ nome,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}}\&\ avaliacao,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigoConta);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoViagem_a01a724c8116fb3c6ef7f18cf0b0c9718}{listarViagens}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigoConta);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoViagem_aaebe018c8cce8ce43de9c03d30d5cce7}{deletarViagem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoViagem_a49ca7f7396d02da85ce8cbd1da0ee810}{atualizarViagem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classNOME}{NOME}}\&\ novoNome,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}}\&\ novaAvaliacao);}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classServicoDestino}{ServicoDestino}}\ \{}
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{classDatabase}{Database}}\&\ db;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{classServicoDestino}{ServicoDestino}}(\mbox{\hyperlink{classDatabase}{Database}}\&\ database);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoDestino_a46ac3156040b3454568c4126a89305c3}{criarDestino}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classNOME}{NOME}}\&\ nome,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classDATA}{DATA}}\&\ dataInicio,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classDATA}{DATA}}\&\ dataFim,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}}\&\ avaliacao,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigoViagem);}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoDestino_a11afd8bd9b7728d44afab60c70e3177a}{listarDestinos}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigoViagem);}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoDestino_adc11b99f479d6503dc2a85600e809d8f}{deletarDestino}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo);}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoDestino_abd786da953d3b4a99ff2fc731fbfd7e0}{atualizarDestino}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classNOME}{NOME}}\&\ novoNome,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classDATA}{DATA}}\&\ novaDataInicio,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classDATA}{DATA}}\&\ novaDataFim,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}}\&\ novaAvaliacao);}
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classServicoAtividade}{ServicoAtividade}}\ \{}
+\DoxyCodeLine{00083\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{classDatabase}{Database}}\&\ db;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{classServicoAtividade}{ServicoAtividade}}(\mbox{\hyperlink{classDatabase}{Database}}\&\ database);}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoAtividade_a912d8cc3b3af843a1c65ca54a0b35c4f}{criarAtividade}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classNOME}{NOME}}\&\ nome,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classDATA}{DATA}}\&\ data,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classHORARIO}{HORARIO}}\&\ horario,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classDURACAO}{DURACAO}}\&\ duracao,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classDINHEIRO}{DINHEIRO}}\&\ preco,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}}\&\ avaliacao,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigoDestino);}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoAtividade_ae25c660420e255d3f72cde4d7ed20875}{listarAtividades}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigoDestino);}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoAtividade_ad24ff9bdbe72def928b58544a1574009}{deletarAtividade}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo);}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoAtividade_ac674b33d440971244e48765d49b9197e}{atualizarAtividade}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classNOME}{NOME}}\&\ novoNome,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classDATA}{DATA}}\&\ novaData,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classHORARIO}{HORARIO}}\&\ novoHorario,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classDURACAO}{DURACAO}}\&\ novaDuracao,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classDINHEIRO}{DINHEIRO}}\&\ novoPreco,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}}\&\ novaAvaliacao);}
+\DoxyCodeLine{00097\ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00103\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classServicoHospedagem}{ServicoHospedagem}}\ \{}
+\DoxyCodeLine{00104\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{classDatabase}{Database}}\&\ db;}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{classServicoHospedagem}{ServicoHospedagem}}(\mbox{\hyperlink{classDatabase}{Database}}\&\ database);}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoHospedagem_a68aabe5f20e5b7d2a607699a362e7d0e}{criarHospedagem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classNOME}{NOME}}\&\ nome,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}}\&\ avaliacao,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classDINHEIRO}{DINHEIRO}}\&\ diaria,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigoDestino);}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoHospedagem_a4be94cec1bbbd3e71c488d3cc40f43f3}{listarHospedagens}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigoDestino);}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoHospedagem_a9aff4eefc355c5618f27f9c74ec02305}{deletarHospedagem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo);}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoHospedagem_a122faf7d0bfede46919ffbd4bc6d8835}{atualizarHospedagem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCODIGO}{CODIGO}}\&\ codigo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classNOME}{NOME}}\&\ novoNome,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}}\&\ novaAvaliacao,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classDINHEIRO}{DINHEIRO}}\&\ novaDiaria);}
+\DoxyCodeLine{00118\ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SERVICO\_H}}
+
+\end{DoxyCode}

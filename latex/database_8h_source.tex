@@ -1,0 +1,31 @@
+\doxysection{database.\+h}
+\hypertarget{database_8h_source}{}\label{database_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DATABASE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DATABASE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <sqlite3.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDatabase}{Database}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ sqlite3*\ db;}
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ dbPath;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classDatabase}{Database}}(\textcolor{keyword}{const}\ std::string\&\ path);}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classDatabase}{\string~Database}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ open();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ close();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ execute(\textcolor{keyword}{const}\ std::string\&\ query);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ executeScript(\textcolor{keyword}{const}\ std::string\&\ scriptPath);}
+\DoxyCodeLine{00022\ \ \ \ \ sqlite3\_stmt*\ prepare(\textcolor{keyword}{const}\ std::string\&\ query);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ tabelaExiste(\textcolor{keyword}{const}\ std::string\&\ nomeTabela);}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DATABASE\_H}}
+
+\end{DoxyCode}

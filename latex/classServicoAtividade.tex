@@ -1,0 +1,38 @@
+\doxysection{Servico\+Atividade Class Reference}
+\hypertarget{classServicoAtividade}{}\label{classServicoAtividade}\index{ServicoAtividade@{ServicoAtividade}}
+
+
+Serviço responsável por operações relacionadas a atividades.  
+
+
+
+
+{\ttfamily \#include $<$servico.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classServicoAtividade_a97fd9182e5ec0b89fbf863cba90fe8c0}\label{classServicoAtividade_a97fd9182e5ec0b89fbf863cba90fe8c0} 
+{\bfseries Servico\+Atividade} (\mbox{\hyperlink{classDatabase}{Database}} \&database)
+\begin{DoxyCompactList}\small\item\em Construtor com referência ao banco de dados. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoAtividade_a912d8cc3b3af843a1c65ca54a0b35c4f}\label{classServicoAtividade_a912d8cc3b3af843a1c65ca54a0b35c4f} 
+bool {\bfseries criar\+Atividade} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo, const \mbox{\hyperlink{classNOME}{NOME}} \&nome, const \mbox{\hyperlink{classDATA}{DATA}} \&data, const \mbox{\hyperlink{classHORARIO}{HORARIO}} \&horario, const \mbox{\hyperlink{classDURACAO}{DURACAO}} \&duracao, const \mbox{\hyperlink{classDINHEIRO}{DINHEIRO}} \&preco, const \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}} \&avaliacao, const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo\+Destino)
+\begin{DoxyCompactList}\small\item\em Cria uma nova atividade. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoAtividade_ae25c660420e255d3f72cde4d7ed20875}\label{classServicoAtividade_ae25c660420e255d3f72cde4d7ed20875} 
+bool {\bfseries listar\+Atividades} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo\+Destino)
+\begin{DoxyCompactList}\small\item\em Lista atividades de um destino. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoAtividade_ad24ff9bdbe72def928b58544a1574009}\label{classServicoAtividade_ad24ff9bdbe72def928b58544a1574009} 
+bool {\bfseries deletar\+Atividade} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo)
+\begin{DoxyCompactList}\small\item\em Deleta uma atividade. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoAtividade_ac674b33d440971244e48765d49b9197e}\label{classServicoAtividade_ac674b33d440971244e48765d49b9197e} 
+bool {\bfseries atualizar\+Atividade} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo, const \mbox{\hyperlink{classNOME}{NOME}} \&novo\+Nome, const \mbox{\hyperlink{classDATA}{DATA}} \&nova\+Data, const \mbox{\hyperlink{classHORARIO}{HORARIO}} \&novo\+Horario, const \mbox{\hyperlink{classDURACAO}{DURACAO}} \&nova\+Duracao, const \mbox{\hyperlink{classDINHEIRO}{DINHEIRO}} \&novo\+Preco, const \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}} \&nova\+Avaliacao)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de uma atividade. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Serviço responsável por operações relacionadas a atividades. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{servico_8h}{servico.\+h}}\item 
+servico.\+cpp\end{DoxyCompactItemize}

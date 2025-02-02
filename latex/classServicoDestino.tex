@@ -1,0 +1,38 @@
+\doxysection{Servico\+Destino Class Reference}
+\hypertarget{classServicoDestino}{}\label{classServicoDestino}\index{ServicoDestino@{ServicoDestino}}
+
+
+Serviço responsável por operações relacionadas a destinos.  
+
+
+
+
+{\ttfamily \#include $<$servico.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classServicoDestino_abe07c625a50cbbdfb7e39639bfd96f0d}\label{classServicoDestino_abe07c625a50cbbdfb7e39639bfd96f0d} 
+{\bfseries Servico\+Destino} (\mbox{\hyperlink{classDatabase}{Database}} \&database)
+\begin{DoxyCompactList}\small\item\em Construtor com referência ao banco de dados. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoDestino_a46ac3156040b3454568c4126a89305c3}\label{classServicoDestino_a46ac3156040b3454568c4126a89305c3} 
+bool {\bfseries criar\+Destino} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo, const \mbox{\hyperlink{classNOME}{NOME}} \&nome, const \mbox{\hyperlink{classDATA}{DATA}} \&data\+Inicio, const \mbox{\hyperlink{classDATA}{DATA}} \&data\+Fim, const \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}} \&avaliacao, const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo\+Viagem)
+\begin{DoxyCompactList}\small\item\em Cria um novo destino. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoDestino_a11afd8bd9b7728d44afab60c70e3177a}\label{classServicoDestino_a11afd8bd9b7728d44afab60c70e3177a} 
+bool {\bfseries listar\+Destinos} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo\+Viagem)
+\begin{DoxyCompactList}\small\item\em Lista destinos de uma viagem. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoDestino_adc11b99f479d6503dc2a85600e809d8f}\label{classServicoDestino_adc11b99f479d6503dc2a85600e809d8f} 
+bool {\bfseries deletar\+Destino} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo)
+\begin{DoxyCompactList}\small\item\em Deleta um destino. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoDestino_abd786da953d3b4a99ff2fc731fbfd7e0}\label{classServicoDestino_abd786da953d3b4a99ff2fc731fbfd7e0} 
+bool {\bfseries atualizar\+Destino} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo, const \mbox{\hyperlink{classNOME}{NOME}} \&novo\+Nome, const \mbox{\hyperlink{classDATA}{DATA}} \&nova\+Data\+Inicio, const \mbox{\hyperlink{classDATA}{DATA}} \&nova\+Data\+Fim, const \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}} \&nova\+Avaliacao)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um destino. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Serviço responsável por operações relacionadas a destinos. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{servico_8h}{servico.\+h}}\item 
+servico.\+cpp\end{DoxyCompactItemize}

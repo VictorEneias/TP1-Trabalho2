@@ -1,0 +1,38 @@
+\doxysection{Servico\+Viagem Class Reference}
+\hypertarget{classServicoViagem}{}\label{classServicoViagem}\index{ServicoViagem@{ServicoViagem}}
+
+
+Serviço responsável por operações relacionadas a viagens.  
+
+
+
+
+{\ttfamily \#include $<$servico.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classServicoViagem_a53803e0b2c53175f91defafdc6e86adb}\label{classServicoViagem_a53803e0b2c53175f91defafdc6e86adb} 
+{\bfseries Servico\+Viagem} (\mbox{\hyperlink{classDatabase}{Database}} \&database)
+\begin{DoxyCompactList}\small\item\em Construtor com referência ao banco de dados. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoViagem_a85c24daf43dbe96b96f5dd615486746c}\label{classServicoViagem_a85c24daf43dbe96b96f5dd615486746c} 
+bool {\bfseries criar\+Viagem} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo, const \mbox{\hyperlink{classNOME}{NOME}} \&nome, const \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}} \&avaliacao, const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo\+Conta)
+\begin{DoxyCompactList}\small\item\em Cria uma nova viagem. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoViagem_a01a724c8116fb3c6ef7f18cf0b0c9718}\label{classServicoViagem_a01a724c8116fb3c6ef7f18cf0b0c9718} 
+bool {\bfseries listar\+Viagens} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo\+Conta)
+\begin{DoxyCompactList}\small\item\em Lista viagens associadas a uma conta. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoViagem_aaebe018c8cce8ce43de9c03d30d5cce7}\label{classServicoViagem_aaebe018c8cce8ce43de9c03d30d5cce7} 
+bool {\bfseries deletar\+Viagem} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo)
+\begin{DoxyCompactList}\small\item\em Deleta uma viagem. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoViagem_a49ca7f7396d02da85ce8cbd1da0ee810}\label{classServicoViagem_a49ca7f7396d02da85ce8cbd1da0ee810} 
+bool {\bfseries atualizar\+Viagem} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo, const \mbox{\hyperlink{classNOME}{NOME}} \&novo\+Nome, const \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}} \&nova\+Avaliacao)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de uma viagem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Serviço responsável por operações relacionadas a viagens. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{servico_8h}{servico.\+h}}\item 
+servico.\+cpp\end{DoxyCompactItemize}

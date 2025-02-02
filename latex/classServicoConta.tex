@@ -1,0 +1,41 @@
+\doxysection{Servico\+Conta Class Reference}
+\hypertarget{classServicoConta}{}\label{classServicoConta}\index{ServicoConta@{ServicoConta}}
+
+
+Serviço responsável por operações de conta.  
+
+
+
+
+{\ttfamily \#include $<$servico.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classServicoConta_a34ee07b9da21ee0497bae36e62d7ff20}\label{classServicoConta_a34ee07b9da21ee0497bae36e62d7ff20} 
+{\bfseries Servico\+Conta} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoConta_a9a5efbbe2cbd0cc39cbac8a0bb62e50c}\label{classServicoConta_a9a5efbbe2cbd0cc39cbac8a0bb62e50c} 
+{\bfseries Servico\+Conta} (\mbox{\hyperlink{classDatabase}{Database}} \&database)
+\begin{DoxyCompactList}\small\item\em Construtor com referência ao banco de dados. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoConta_ac49efee149102e8931dec15566e6eb52}\label{classServicoConta_ac49efee149102e8931dec15566e6eb52} 
+bool {\bfseries criar\+Conta} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo, const \mbox{\hyperlink{classSENHA}{SENHA}} \&senha)
+\begin{DoxyCompactList}\small\item\em Cria uma nova conta. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoConta_a88fa5302ccdbf77e0b4b864015acca8f}\label{classServicoConta_a88fa5302ccdbf77e0b4b864015acca8f} 
+bool {\bfseries autenticar\+Conta} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo, const \mbox{\hyperlink{classSENHA}{SENHA}} \&senha)
+\begin{DoxyCompactList}\small\item\em Autentica uma conta existente. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoConta_a9bb8cc96479fd2071da40fe3c5c4538e}\label{classServicoConta_a9bb8cc96479fd2071da40fe3c5c4538e} 
+bool {\bfseries deletar\+Conta} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo)
+\begin{DoxyCompactList}\small\item\em Deleta uma conta. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoConta_ac6c8c3e8599684b53cf3bb33061d4dcd}\label{classServicoConta_ac6c8c3e8599684b53cf3bb33061d4dcd} 
+\mbox{\hyperlink{classCONTA}{CONTA}} {\bfseries get\+Conta} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&nome)
+\begin{DoxyCompactList}\small\item\em Obtém informações de uma conta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Serviço responsável por operações de conta. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{servico_8h}{servico.\+h}}\item 
+servico.\+cpp\end{DoxyCompactItemize}

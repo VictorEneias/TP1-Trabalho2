@@ -1,0 +1,30 @@
+\doxysection{servico.\+h File Reference}
+\hypertarget{servico_8h}{}\label{servico_8h}\index{servico.h@{servico.h}}
+
+
+Declaração das classes de serviço para contas, viagens, destinos, atividades e hospedagens.  
+
+
+{\ttfamily \#include "{}database.\+h"{}}\newline
+{\ttfamily \#include "{}dominio.\+h"{}}\newline
+{\ttfamily \#include "{}entidade.\+h"{}}\newline
+Include dependency graph for servico.\+h\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classServicoConta}{Servico\+Conta}}
+\begin{DoxyCompactList}\small\item\em Serviço responsável por operações de conta. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classServicoViagem}{Servico\+Viagem}}
+\begin{DoxyCompactList}\small\item\em Serviço responsável por operações relacionadas a viagens. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classServicoDestino}{Servico\+Destino}}
+\begin{DoxyCompactList}\small\item\em Serviço responsável por operações relacionadas a destinos. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classServicoAtividade}{Servico\+Atividade}}
+\begin{DoxyCompactList}\small\item\em Serviço responsável por operações relacionadas a atividades. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classServicoHospedagem}{Servico\+Hospedagem}}
+\begin{DoxyCompactList}\small\item\em Serviço responsável por operações relacionadas a hospedagens. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaração das classes de serviço para contas, viagens, destinos, atividades e hospedagens. 
+

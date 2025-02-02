@@ -1,0 +1,193 @@
+\doxysection{dominio.\+h}
+\hypertarget{dominio_8h_source}{}\label{dominio_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOMINIO\_H\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOMINIO\_H\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAVALIACAO}{AVALIACAO}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ avaliacao;\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ verifica(\textcolor{keywordtype}{int});\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}}()\ \{\}\ \textcolor{comment}{//\ Construtor\ padrão}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}}(\textcolor{keywordtype}{int}\ avaliacao)\ \{\ \textcolor{comment}{//\ Construtor\ com\ parâmetro}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ SetAvaliacao(avaliacao);}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ GetAvaliacao()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Método\ Get\ marcado\ como\ const}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ SetAvaliacao(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCODIGO}{CODIGO}}\ \{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{string}\ codigo;\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ verifica(\textcolor{keywordtype}{string});\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classCODIGO}{CODIGO}}()\ \{\}\ \textcolor{comment}{//\ Construtor\ padrão}}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classCODIGO}{CODIGO}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ codigo)\ \{\ \textcolor{comment}{//\ Construtor\ com\ parâmetro}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ SetCodigo(codigo);}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{string}\ GetCodigo()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Método\ Get\ marcado\ como\ const}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ SetCodigo(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDATA}{DATA}}\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{string}\ data;\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ verifica(\textcolor{keywordtype}{string});\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classDATA}{DATA}}()\ \{\}\ \textcolor{comment}{//\ Construtor\ padrão}}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{classDATA}{DATA}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ data)\ \{\ \textcolor{comment}{//\ Construtor\ com\ parâmetro}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ SetData(data);}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{string}\ GetData()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Método\ Get\ marcado\ como\ const}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ SetData(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDINHEIRO}{DINHEIRO}}\ \{}
+\DoxyCodeLine{00065\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{float}\ dinheiro;\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ verifica(\textcolor{keywordtype}{float});\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{classDINHEIRO}{DINHEIRO}}()\ \{\}\ \textcolor{comment}{//\ Construtor\ padrão}}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{classDINHEIRO}{DINHEIRO}}(\textcolor{keywordtype}{float}\ dinheiro)\ \{\ \textcolor{comment}{//\ Construtor\ com\ parâmetro}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ SetDinheiro(dinheiro);}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{float}\ GetDinheiro()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Método\ Get\ marcado\ como\ const}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ SetDinheiro(\textcolor{keywordtype}{float});}
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDURACAO}{DURACAO}}\ \{}
+\DoxyCodeLine{00082\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ duracao;\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ verifica(\textcolor{keywordtype}{int});\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{classDURACAO}{DURACAO}}()\ \{\}\ \textcolor{comment}{//\ Construtor\ padrão}}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{classDURACAO}{DURACAO}}(\textcolor{keywordtype}{int}\ duracao)\ \{\ \textcolor{comment}{//\ Construtor\ com\ parâmetro}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ SetDuracao(duracao);}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ GetDuracao()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Método\ Get\ marcado\ como\ const}}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ SetDuracao(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00093\ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classHORARIO}{HORARIO}}\ \{}
+\DoxyCodeLine{00099\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{string}\ horario;\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ verifica(\textcolor{keywordtype}{string});\ }
+\DoxyCodeLine{00103\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{classHORARIO}{HORARIO}}()\ \{\}\ \textcolor{comment}{//\ Construtor\ padrão}}
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{classHORARIO}{HORARIO}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ horario)\ \{\ \textcolor{comment}{//\ Construtor\ com\ parâmetro}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ SetHorario(horario);}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{string}\ GetHorario()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Método\ Get\ marcado\ como\ const}}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ SetHorario(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{00110\ \};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classNOME}{NOME}}\ \{}
+\DoxyCodeLine{00116\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{string}\ nome;\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ verifica(\textcolor{keywordtype}{string});\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{classNOME}{NOME}}()\ \{\}\ \textcolor{comment}{//\ Construtor\ padrão}}
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{classNOME}{NOME}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ nome)\ \{\ \textcolor{comment}{//\ Construtor\ com\ parâmetro}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ SetNome(nome);}
+\DoxyCodeLine{00124\ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{string}\ GetNome()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Método\ Get\ marcado\ como\ const}}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ SetNome(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{00127\ \};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00132\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSENHA}{SENHA}}\ \{}
+\DoxyCodeLine{00133\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{int}\ senha;\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ verifica(\textcolor{keywordtype}{int});\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{classSENHA}{SENHA}}()\ \{\}\ \textcolor{comment}{//\ Construtor\ padrão}}
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{classSENHA}{SENHA}}(\textcolor{keywordtype}{int}\ senha)\ \{\ \textcolor{comment}{//\ Construtor\ com\ parâmetro}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ SetSenha(senha);}
+\DoxyCodeLine{00141\ \ \ \ \ \}}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{int}\ GetSenha()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Método\ Get\ marcado\ como\ const}}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSenha(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00144\ \};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{comment}{//\ Implementações\ inline}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ AVALIACAO::SetAvaliacao(\textcolor{keywordtype}{int}\ avaliacao)\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ verifica(avaliacao);}
+\DoxyCodeLine{00150\ \ \ \ \ this-\/>avaliacao\ =\ avaliacao;}
+\DoxyCodeLine{00151\ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ AVALIACAO::GetAvaliacao()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{return}\ avaliacao;}
+\DoxyCodeLine{00155\ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ CODIGO::SetCodigo(\textcolor{keywordtype}{string}\ codigo)\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ verifica(codigo);}
+\DoxyCodeLine{00159\ \ \ \ \ this-\/>codigo\ =\ codigo;}
+\DoxyCodeLine{00160\ \}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{string}\ CODIGO::GetCodigo()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordflow}{return}\ codigo;}
+\DoxyCodeLine{00164\ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ DATA::SetData(\textcolor{keywordtype}{string}\ data)\ \{}
+\DoxyCodeLine{00167\ \ \ \ \ verifica(data);}
+\DoxyCodeLine{00168\ \ \ \ \ this-\/>data\ =\ data;}
+\DoxyCodeLine{00169\ \}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{string}\ DATA::GetData()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{return}\ data;}
+\DoxyCodeLine{00173\ \}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ DINHEIRO::SetDinheiro(\textcolor{keywordtype}{float}\ dinheiro)\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ verifica(dinheiro);}
+\DoxyCodeLine{00177\ \ \ \ \ this-\/>dinheiro\ =\ dinheiro;}
+\DoxyCodeLine{00178\ \}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ DINHEIRO::GetDinheiro()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordflow}{return}\ dinheiro;}
+\DoxyCodeLine{00182\ \}}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ DURACAO::SetDuracao(\textcolor{keywordtype}{int}\ duracao)\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ verifica(duracao);}
+\DoxyCodeLine{00186\ \ \ \ \ this-\/>duracao\ =\ duracao;}
+\DoxyCodeLine{00187\ \}}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ DURACAO::GetDuracao()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{return}\ duracao;}
+\DoxyCodeLine{00191\ \}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ HORARIO::SetHorario(\textcolor{keywordtype}{string}\ horario)\ \{}
+\DoxyCodeLine{00194\ \ \ \ \ verifica(horario);}
+\DoxyCodeLine{00195\ \ \ \ \ this-\/>horario\ =\ horario;}
+\DoxyCodeLine{00196\ \}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{string}\ HORARIO::GetHorario()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordflow}{return}\ horario;}
+\DoxyCodeLine{00200\ \}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ NOME::SetNome(\textcolor{keywordtype}{string}\ nome)\ \{}
+\DoxyCodeLine{00203\ \ \ \ \ verifica(nome);}
+\DoxyCodeLine{00204\ \ \ \ \ this-\/>nome\ =\ nome;}
+\DoxyCodeLine{00205\ \}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{string}\ NOME::GetNome()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordflow}{return}\ nome;}
+\DoxyCodeLine{00209\ \}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ SENHA::SetSenha(\textcolor{keywordtype}{int}\ senha)\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ verifica(senha);}
+\DoxyCodeLine{00213\ \ \ \ \ this-\/>senha\ =\ senha;}
+\DoxyCodeLine{00214\ \}}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ SENHA::GetSenha()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordflow}{return}\ senha;}
+\DoxyCodeLine{00218\ \}}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOMINIO\_H\_INCLUDED}}
+
+\end{DoxyCode}

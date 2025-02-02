@@ -1,0 +1,38 @@
+\doxysection{Servico\+Hospedagem Class Reference}
+\hypertarget{classServicoHospedagem}{}\label{classServicoHospedagem}\index{ServicoHospedagem@{ServicoHospedagem}}
+
+
+Serviço responsável por operações relacionadas a hospedagens.  
+
+
+
+
+{\ttfamily \#include $<$servico.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classServicoHospedagem_a88a3a7cd1f985e9a2acc2312280b8e8c}\label{classServicoHospedagem_a88a3a7cd1f985e9a2acc2312280b8e8c} 
+{\bfseries Servico\+Hospedagem} (\mbox{\hyperlink{classDatabase}{Database}} \&database)
+\begin{DoxyCompactList}\small\item\em Construtor com referência ao banco de dados. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoHospedagem_a68aabe5f20e5b7d2a607699a362e7d0e}\label{classServicoHospedagem_a68aabe5f20e5b7d2a607699a362e7d0e} 
+bool {\bfseries criar\+Hospedagem} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo, const \mbox{\hyperlink{classNOME}{NOME}} \&nome, const \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}} \&avaliacao, const \mbox{\hyperlink{classDINHEIRO}{DINHEIRO}} \&diaria, const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo\+Destino)
+\begin{DoxyCompactList}\small\item\em Cria uma nova hospedagem. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoHospedagem_a4be94cec1bbbd3e71c488d3cc40f43f3}\label{classServicoHospedagem_a4be94cec1bbbd3e71c488d3cc40f43f3} 
+bool {\bfseries listar\+Hospedagens} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo\+Destino)
+\begin{DoxyCompactList}\small\item\em Lista hospedagens de um destino. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoHospedagem_a9aff4eefc355c5618f27f9c74ec02305}\label{classServicoHospedagem_a9aff4eefc355c5618f27f9c74ec02305} 
+bool {\bfseries deletar\+Hospedagem} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo)
+\begin{DoxyCompactList}\small\item\em Deleta uma hospedagem. \end{DoxyCompactList}\item 
+\Hypertarget{classServicoHospedagem_a122faf7d0bfede46919ffbd4bc6d8835}\label{classServicoHospedagem_a122faf7d0bfede46919ffbd4bc6d8835} 
+bool {\bfseries atualizar\+Hospedagem} (const \mbox{\hyperlink{classCODIGO}{CODIGO}} \&codigo, const \mbox{\hyperlink{classNOME}{NOME}} \&novo\+Nome, const \mbox{\hyperlink{classAVALIACAO}{AVALIACAO}} \&nova\+Avaliacao, const \mbox{\hyperlink{classDINHEIRO}{DINHEIRO}} \&nova\+Diaria)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de uma hospedagem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Serviço responsável por operações relacionadas a hospedagens. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{servico_8h}{servico.\+h}}\item 
+servico.\+cpp\end{DoxyCompactItemize}

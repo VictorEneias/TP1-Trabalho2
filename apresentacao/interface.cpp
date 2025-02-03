@@ -28,7 +28,7 @@ void START_SCREEN::run(Database db){
             if(command=="sair"){
                 break;
             }
-            else if (command == "criar_conta")
+            else  if (command == "criar_conta")
             {
                 std::string codigo, senha;
                 CONTA conta;
@@ -56,8 +56,18 @@ void START_SCREEN::run(Database db){
                 }
                 loggedAcount.SetCodigo(_codigo);
                 loggedAcount.SetSenha(_senha);
+                try
+                {
                 Conta.criarConta(_codigo, _senha);
+                std::cout<<"conta criada"<<std::endl;
                 logged = true;
+                }
+                catch(const std::exception& e)
+                {
+                    std::cout<<"erro na criacao"<<std::endl;
+                    std::cerr << e.what() << '\n';
+                }
+
             }
             else if (command == "login")
             {
@@ -89,6 +99,7 @@ void START_SCREEN::run(Database db){
                 {
                     loggedAcount.SetCodigo(_codigo);
                     loggedAcount.SetSenha(_senha);
+                    std::cout<<"logado"<<std::endl;
                     logged=true;
                 }
             }
@@ -125,7 +136,15 @@ void START_SCREEN::run(Database db){
                 // Handle Conta commands
                 if (command == "excluir_conta")
                 {
-                    Conta.deletarConta(loggedAcount.GetCodigo());
+                    try
+                    {
+                        Conta.deletarConta(loggedAcount.GetCodigo());
+                        std::cout<<"conta deletada"<<std::endl;
+                    }
+                    catch(const std::exception& e)
+                    {
+                        std::cerr << e.what() << '\n';
+                    }
                 }
 
                 // Handle Viagem commands
@@ -163,7 +182,16 @@ void START_SCREEN::run(Database db){
                     {
                         std::cerr << e.what() << '\n';
                     }
-                    viagem.criarViagem(id,nome , avaliacao, loggedAcount.GetCodigo());
+                    try
+                    {
+                        viagem.criarViagem(id,nome , avaliacao, loggedAcount.GetCodigo());
+                    }
+                    catch(const std::exception& e)
+                    {
+                        std::cerr << e.what() << '\n';
+                    }
+                    
+
                 }
 
                 else if (command == "ler_viagem")
@@ -616,7 +644,7 @@ void START_SCREEN::run(Database db){
                     std::cin >> _avaliacao;
                     std::cout << "Digite o valor: ";
                     std::cin >> _valor;
-                    std::cout << "Digite o valor: ";
+                    std::cout << "Digite o destino: ";
                     std::cin >> _id_destino;
                     CODIGO id,id_destino;
                     AVALIACAO avalicao;
